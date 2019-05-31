@@ -111,14 +111,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="BookingInquiry.aspx" />
+    <Content Include="ConfigEstablishment.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="DayStatistics.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -130,7 +130,27 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\TicketWeb - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="image\20073111530369.jpg" />
+    <Content Include="image\bar.jpg" />
+    <Content Include="image\c.gif" />
+    <Content Include="image\center.gif" />
+    <Content Include="image\head.gif" />
+    <Content Include="image\Left_Student.jpg" />
+    <Content Include="image\menu.gif" />
+    <Content Include="image\myhome1.gif" />
+    <Content Include="image\top_6.gif" />
+    <Content Include="image\what_sall_bg.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="MonthStatistics.aspx" />
+    <Content Include="nootbook.aspx" />
+    <Content Include="OperationPlan.aspx" />
+    <Content Include="PredeterminedTicket.aspx" />
+    <Content Include="PredeterminedTicketInquiry.aspx" />
+    <Content Include="QuarterStatistics.aspx" />
+    <Content Include="ReturningTicket.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -159,40 +179,112 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SealTicket.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="SystemCfg.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="BookingInquiry.aspx.cs">
+      <DependentUpon>BookingInquiry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="BookingInquiry.aspx.designer.cs">
+      <DependentUpon>BookingInquiry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="ConfigEstablishment.aspx.cs">
+      <DependentUpon>ConfigEstablishment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="ConfigEstablishment.aspx.designer.cs">
+      <DependentUpon>ConfigEstablishment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DayStatistics.aspx.cs">
+      <DependentUpon>DayStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DayStatistics.aspx.designer.cs">
+      <DependentUpon>DayStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="db.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthStatistics.aspx.cs">
+      <DependentUpon>MonthStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthStatistics.aspx.designer.cs">
+      <DependentUpon>MonthStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nootbook.aspx.cs">
+      <DependentUpon>nootbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nootbook.aspx.designer.cs">
+      <DependentUpon>nootbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperationPlan.aspx.cs">
+      <DependentUpon>OperationPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OperationPlan.aspx.designer.cs">
+      <DependentUpon>OperationPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PredeterminedTicket.aspx.cs">
+      <DependentUpon>PredeterminedTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PredeterminedTicket.aspx.designer.cs">
+      <DependentUpon>PredeterminedTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PredeterminedTicketInquiry.aspx.cs">
+      <DependentUpon>PredeterminedTicketInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PredeterminedTicketInquiry.aspx.designer.cs">
+      <DependentUpon>PredeterminedTicketInquiry.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuarterStatistics.aspx.cs">
+      <DependentUpon>QuarterStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuarterStatistics.aspx.designer.cs">
+      <DependentUpon>QuarterStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturningTicket.aspx.cs">
+      <DependentUpon>ReturningTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturningTicket.aspx.designer.cs">
+      <DependentUpon>ReturningTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SealTicket.aspx.cs">
+      <DependentUpon>SealTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SealTicket.aspx.designer.cs">
+      <DependentUpon>SealTicket.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,14 +292,16 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    <Compile Include="SystemCfg.aspx.cs">
+      <DependentUpon>SystemCfg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    <Compile Include="SystemCfg.aspx.designer.cs">
+      <DependentUpon>SystemCfg.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

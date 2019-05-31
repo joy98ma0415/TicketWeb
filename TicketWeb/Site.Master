@@ -1,72 +1,78 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TicketWeb.SiteMaster" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - 我的 ASP.NET  應用程式</title>
-
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <title>售票系統</title>
 </head>
 <body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">應用程式名稱</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">首頁</a></li>
-                        <li><a runat="server" href="~/About">關於</a></li>
-                        <li><a runat="server" href="~/Contact">連絡人</a></li>
-                    </ul>
-                </div>
-            </div>
+    <form id="form1" runat="server">
+        <div style="margin: 10px 60px 20px 100px; font-size: 14px">
+            <table border="0" cellpadding="0" cellspacing="0" style="width: 780px; border-right: #0099cc thin solid; border-top: #0099cc thin solid; border-left: #0099cc thin solid; border-bottom: #0099cc thin solid; height: 596px;">
+                <tr>
+                    <td colspan="3" style="background-position: 100% 100%; background-repeat: repeat-x; height: 42px; background-image: url(image/top_6.gif); font-size: x-large; color: #3366ff;" valign="middle" align="center">web售票管理系統
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-position: 100% 100%; background-repeat: repeat-x; height: 19px; background-image: url(image/menu.gif); color: #ffffff;" valign="top" align="right">
+                        <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="DodgerBlue" OnClick="LinkButton2_Click">首頁</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="DodgerBlue" OnClientClick="window.close();">退出</asp:LinkButton></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-position: 100% 100%; background-repeat: repeat-x; height: 25px; background-image: url(image/bar.jpg); color: #ffffff;" valign="top" align="right">
+                        <asp:Label ID="Label1" runat="server" Width="500px"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td style="width: 41px; height: 386px" valign="top">
+                        <asp:TreeView ID="TreeView1" runat="server" Width="126px" Font-Size="Larger" ImageSet="BulletedList" ShowExpandCollapse="False">
+                            <ParentNodeStyle Font-Bold="False" />
+                            <HoverNodeStyle Font-Underline="True" ForeColor="Black" BackColor="DodgerBlue" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
+                                VerticalPadding="0px" />
+                            <Nodes>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" Text="web售票管理系統" Value="web售票管理系統" NavigateUrl="~/Index.aspx"></asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" Text="前臺營業" Value="前臺營業" NavigateUrl="~/SealTicket.aspx">
+                                    <asp:TreeNode Text="銷售車票" Value="銷售車票" NavigateUrl="~/SealTicket.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="預定車票" Value="預定車票" NavigateUrl="~/PredeterminedTicket.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text=" 退回車票" Value=" 退回車票" NavigateUrl="~/ReturningTicket.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" Text="資訊查詢" Value="資訊查詢" NavigateUrl="~/PredeterminedTicketInquiry.aspx">
+                                    <asp:TreeNode Text="售票資訊查詢" Value="售票資訊查詢" NavigateUrl="~/PredeterminedTicketInquiry.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="訂票資訊查詢" Value="訂票資訊查詢" NavigateUrl="~/BookingInquiry.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="運營計畫查詢" Value="運營計畫查詢" NavigateUrl="~/OperationPlan.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" Text="營業統計" Value="營業統計" NavigateUrl="~/DayStatistics.aspx">
+                                    <asp:TreeNode Text="日售票統計" Value="日售票統計" NavigateUrl="~/DayStatistics.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="月售票統計" Value="月售票統計" NavigateUrl="~/MonthStatistics.aspx"></asp:TreeNode>
+                                    <asp:TreeNode Text="季度售票統計" Value="季度售票統計" NavigateUrl="~/QuarterStatistics.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" Text="常用工具" Value="常用工具" NavigateUrl="~/nootbook.aspx">
+                                    <asp:TreeNode Text="記事本" Value="記事本" NavigateUrl="~/nootbook.aspx"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" NavigateUrl="~/ConfigEstablishment.aspx" Text="基礎設置"
+                                    Value="基礎設置"></asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" NavigateUrl="~/SystemCfg.aspx" Text="系統設置"
+                                    Value="系統設置"></asp:TreeNode>
+                                <asp:TreeNode ImageUrl="~/image/c.gif" NavigateUrl="https://portfoliowebapplication.azurewebsites.net/" Text="回作品集"
+                                    Value="回作品集"></asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px"
+                                NodeSpacing="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                    </td>
+                    <td style="width: 21px; height: 386px; background-position: center center; background-image: url(image/Left_Student.jpg); background-repeat: repeat-y;"
+                        valign="top"></td>
+                    <td style="width: 641px; height: 386px" valign="top">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-position: center center; background-image: url(image/bar.jpg); background-repeat: repeat-x; height: 31px;"></td>
+                </tr>
+            </table>
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - 我的 ASP.NET  應用程式</p>
-            </footer>
-        </div>
-
     </form>
 </body>
 </html>

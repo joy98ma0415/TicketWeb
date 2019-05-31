@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TicketWeb
 {
-    public partial class About : Page
+    public partial class PredeterminedTicketInquiry : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
